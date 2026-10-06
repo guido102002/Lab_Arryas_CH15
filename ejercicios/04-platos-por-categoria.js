@@ -44,6 +44,7 @@ console.log(platosPorCategoria(menu, "fuerte").length); // 2
 console.log(platosPorCategoria(menu, "Bebida"));        // []
 console.log(platosPorCategoria([], "bebida"));          // []
 console.log(menu.length);
+//subir cambio
 
 // No borres esta línea: es la puerta por donde el test usa tu función
 module.exports = { platosPorCategoria };
