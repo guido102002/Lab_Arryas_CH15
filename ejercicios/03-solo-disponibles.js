@@ -18,10 +18,31 @@
 // Pista: es el mismo patrón de cursosEconomicos de la clase,
 // con otra condición.
 // ============================================================
+const menu = [
+  { nombre: "Bandeja paisa",    precio: 32000, categoria: "fuerte", disponible: true },
+  { nombre: "Ajiaco",           precio: 28000, categoria: "fuerte", disponible: false },
+  { nombre: "Limonada de coco", precio: 9000,  categoria: "bebida", disponible: true }
+];
 
 function soloDisponibles(menu) {
-  // Tu código aquí
+  const disponibles = [];
+
+  for (let i = 0; i < menu.length; i++) {
+    const plato = menu[i];
+
+    if (plato.disponible === true) {
+      disponibles.push(plato);
+    }
+  }
+
+  return disponibles;
 }
+const resultado = soloDisponibles(menu);
+
+console.log(resultado.length); 
+console.log(resultado[1]);      
+console.log(menu.length);       
+console.log(soloDisponibles([])); 
 
 // No borres esta línea: es la puerta por donde el test usa tu función
 module.exports = { soloDisponibles };
